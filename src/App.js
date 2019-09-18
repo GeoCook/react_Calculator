@@ -37,22 +37,30 @@ equalHandler=()=>{
           {this.state.display}
         </div>
         <div id="calc-btns">
-          <button className="white" onClick={() => this.inputHandler("7")}>7</button>
-          <button className="white" onClick={() => this.inputHandler("8")}>8</button>
-          <button className="white" onClick={() => this.inputHandler("9")}>9</button>
-          <button className="red" onClick={()=>this.operatorHandler("/")}>÷</button>
-          <button className="white" onClick={() => this.inputHandler("4")}>4</button>
-          <button className="white" onClick={() => this.inputHandler("5")}>5</button>
-          <button className="white" onClick={() => this.inputHandler("6")}>6</button>
-          <button className="red" onClick={()=>this.operatorHandler("*")}>x</button>
-          <button className="white" onClick={() => this.inputHandler("1")}>1</button>
-          <button className="white" onClick={() => this.inputHandler("2")}>2</button>
-          <button className="white" onClick={() => this.inputHandler("3")}>3</button>
-          <button className="red" onClick={()=>this.operatorHandler("-")}>-</button>
-          <button className="white" onClick={this.clearHandler}>clear</button>
-          <button className="white" onClick={() => this.inputHandler("0")}>0</button>
-          <button className="red" onClick={()=>this.operatorHandler("+")}>+</button>
-          <button className="red" onClick={this.equalHandler}>=</button>
+          <div id="row1">
+            <button className="white" onClick={() => this.inputHandler("7")}>7</button>
+            <button className="white" onClick={() => this.inputHandler("8")}>8</button>
+            <button className="white" onClick={() => this.inputHandler("9")}>9</button>
+            <button className="red" onClick={()=>this.operatorHandler("/")}>÷</button>
+          </div>
+          <div id="row2">
+            <button className="white" onClick={() => this.inputHandler("4")}>4</button>
+            <button className="white" onClick={() => this.inputHandler("5")}>5</button>
+            <button className="white" onClick={() => this.inputHandler("6")}>6</button>
+            <button className="red" onClick={()=>this.operatorHandler("*")}>x</button>
+          </div>
+          <div id="row3">
+            <button className="white" onClick={() => this.inputHandler("1")}>1</button>
+            <button className="white" onClick={() => this.inputHandler("2")}>2</button>
+            <button className="white" onClick={() => this.inputHandler("3")}>3</button>
+            <button className="red" onClick={()=>this.operatorHandler("-")}>-</button>
+          </div>
+          <div id="row4">
+            <button className="white" id="clear" onClick={this.clearHandler}>C</button>
+            <button className="white" onClick={() => this.inputHandler("0")}>0</button>
+            <button className="red" onClick={()=>this.operatorHandler("+")}>+</button>
+            <button className="red" onClick={this.equalHandler}>=</button>
+          </div>
         </div>
       </div>
     );
